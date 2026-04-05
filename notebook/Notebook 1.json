@@ -1,0 +1,65 @@
+{
+	"name": "Notebook 1",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "ipl",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "da941b79-d0fb-4d69-9021-67194182a74c"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1"
+			},
+			"enableDebugMode": false,
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/2849627d-2dfd-40ee-98c9-ba4170c4cfd0/resourceGroups/IPL/providers/Microsoft.Synapse/workspaces/iplanalytics/bigDataPools/ipl",
+				"name": "ipl",
+				"type": "Spark",
+				"endpoint": "https://iplanalytics.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ipl",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
+				},
+				"sparkVersion": "3.5",
+				"nodeCount": 10,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"spark.sql(\"\"\"\n",
+					"CREATE TABLE player_stats\n",
+					"USING DELTA\n",
+					"LOCATION 'abfss://gold@ipl2019.dfs.core.windows.net/player_stats/'\n",
+					"\"\"\")"
+				],
+				"execution_count": 2
+			}
+		]
+	}
+}

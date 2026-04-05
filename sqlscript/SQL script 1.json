@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "CREATE VIEW player_stats_view AS\nSELECT *\nFROM OPENROWSET(\n    BULK 'https://ipl2019.dfs.core.windows.net/gold/player_stats/',\n    FORMAT = 'DELTA'\n) AS rows;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "ipl",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
