@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "iplanalytics"
+		},
+		"iplanalytics-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:iplanalytics.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"iplstorage_accountKey": {
+			"value": ""
+		},
+		"iplanalytics-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://ipl2019.dfs.core.windows.net"
+		},
+		"iplstorage_properties_typeProperties_url": {
+			"value": "https://ipl2019.dfs.core.windows.net/"
+		},
+		"iplvault_properties_typeProperties_baseUrl": {
+			"value": "https://ipl2109key.vault.azure.net/"
+		}
+	}
+}
