@@ -1,0 +1,9 @@
+{
+	"name": "ipldatafactory2107",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "332b0e64-1acf-445e-ad37-39cf6e9bb6ca",
+		"tenantId": "8e34f429-1bef-49aa-91c7-a4aad341eb33"
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "ipldatabricks",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-7405618683356345.5.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "iplvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricks"
+			},
+			"existingClusterId": "0405-090644-rhaojo2j"
+		}
+	}
+}

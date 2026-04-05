@@ -1,0 +1,12 @@
+{
+	"name": "iplstorage",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://ipl2019.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDNFOTk4RENDLTU2N0MtNDZCMC1CM0Q1LUUxNjdCNUVDRDBGRF81YTJkNTRjOC03NDcxLTRlNWEtYmMyZi1kZDZhNDE4ZGQ5ZTkiDQp9"
+		}
+	}
+}
